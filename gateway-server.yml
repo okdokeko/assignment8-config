@@ -43,22 +43,14 @@ spring:
           filters:
             - RewritePath=/google/(?<path>.*), /$\{path}
 
-        # part 8
-        - id: arizona
-          uri: https://www.arizona.edu
-          predicates:
-            - Path=/arizona/**
-          filters:
-            - RewritePath=/arizona/(?<path>.*), /$\{path}
-
-        # part 5 (dymamic reload)
-        # - id: firefox
-        #   uri: https://www.firefox.com
+        # part 8 + part 5 (dymamic reload)
+        # - id: arizona
+        #   uri: https://www.arizona.edu
         #   predicates:
-        #     - Path=/firefox/**
+        #     - Path=/arizona/**
         #   filters:
-        #     - RewritePath=/firefox/(?<path>.*), /$\{path}
-       
+        #     - RewritePath=/arizona/(?<path>.*), /$\{path}
+
 management:
   endpoints:
     web:
