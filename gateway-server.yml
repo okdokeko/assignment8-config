@@ -52,12 +52,12 @@ spring:
             - RewritePath=/arizona/(?<path>.*), /$\{path}
 
         # part 5 (dymamic reload)
-        # - id: firefox
-        #   uri: https://www.firefox.com
-        #   predicates:
-        #     - Path=/firefox/**
-        #   filters:
-        #     - RewritePath=/firefox/(?<path>.*), /$\{path}
+        - id: firefox
+          uri: https://www.firefox.com
+          predicates:
+            - Path=/firefox/**
+          filters:
+            - RewritePath=/firefox/(?<path>.*), /$\{path}
        
 management:
   endpoints:
