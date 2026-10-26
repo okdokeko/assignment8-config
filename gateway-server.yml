@@ -44,12 +44,12 @@ spring:
             - RewritePath=/google/(?<path>.*), /$\{path}
 
         # part 8 + part 5 (dymamic reload)
-        # - id: arizona
-        #   uri: https://www.arizona.edu
-        #   predicates:
-        #     - Path=/arizona/**
-        #   filters:
-        #     - RewritePath=/arizona/(?<path>.*), /$\{path}
+        - id: arizona
+          uri: https://www.arizona.edu
+          predicates:
+            - Path=/arizona/**
+          filters:
+            - RewritePath=/arizona/(?<path>.*), /$\{path}
 
 management:
   endpoints:
